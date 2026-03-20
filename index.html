@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced UI Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo">WebApp</h2>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showSection('quiz', this)" class="active-link">Quiz</a></li>
+    <li><a href="#" onclick="showSection('api', this)">Jokes</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER TITLE (DYNAMIC) -->
+<header class="hero">
+  <h1 id="sectionTitle">Quiz</h1>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+  <!-- QUIZ SECTION -->
+  <section id="quiz" class="card section active">
+
+    <h2>Select Quiz Language</h2>
+
+    <div class="lang-buttons">
+      <button onclick="startQuiz('java')">Java</button>
+      <button onclick="startQuiz('c')">C</button>
+      <button onclick="startQuiz('python')">Python</button>
+      <button onclick="startQuiz('cpp')">C++</button>
+      <button onclick="startQuiz('html')">HTML</button>
+      <button onclick="startQuiz('js')">JavaScript</button>
+    </div>
+
+    <div id="quizArea" style="display:none;">
+      <p id="question"></p>
+      <div id="answers"></div>
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+
+  </section>
+
+  <!-- JOKE SECTION -->
+  <section id="api" class="card section">
+    <h2>😂 Joke Generator</h2>
+    <p id="joke">Click below to load a joke</p>
+    <button onclick="getJoke()">Get Joke</button>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Advanced UI Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
